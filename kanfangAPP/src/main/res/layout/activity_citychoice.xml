@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--标题栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="#05c7f7">
+
+        <TextView
+            style="@style/title_text_style"
+            android:text="选择城市" />
+
+        <Button
+            style="@style/title_text_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="取消"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+    <!--搜索-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#aaaaaa"
+        android:orientation="horizontal" />
+    <!--头部悬停控件-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--侧滑控件 -->
+        <kanfang.qf.com.kanfang.widget.SlideView
+            android:id="@+id/slideView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:padding="10dp" />
+
+        <!--放大控件-->
+        <kanfang.qf.com.kanfang.widget.SlideLetterView
+            android:id="@+id/letterView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="20dp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+</LinearLayout>
